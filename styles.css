@@ -1,0 +1,153 @@
+html,body{
+    margin: 0;
+    background-color:#E0E0E0;
+}
+li{
+    list-style:none;
+  }
+a{
+    color:#000;
+    text-decoration:none;
+  }
+.view-page{
+    background-image: url("./src/bg.jpg");
+    background-position: 0px;
+    min-width: 450px;
+    min-height: 450px;
+}
+header{
+    min-height: 60px;
+    width: 100%;
+    margin: 0;
+    /* background:rgb(245,248,250,0.1); */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#header-img{
+    width: auto;
+    height: 70px;
+    transition: transform .2s;
+}
+#header-img:hover{
+    transform: scale(1.5);
+}
+.nav-link{
+    color: #FFED52;
+    background: rgb(230,248,250,0.1);
+    height: 60px;
+    padding: 23px;
+}
+
+.nav-link:hover{
+    background-color: rgb(230,248,250,0.8);
+    color: red;
+}
+#nav-bar > ul {
+    display: flex;
+    flex-direction: row;
+    color: #FFED52;
+}
+#welcome-section{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px auto;
+    min-height: 100px;
+}
+#welcome-content{
+    color:red;
+    font-size: 30px; 
+}
+
+#newsletter{
+    width: 48%;
+    margin: 0px auto;
+}
+#newsletter > h2 {
+    text-align: center;
+    font-size: 34px;
+}
+#email{
+    display: block;
+    margin: 0px auto;
+    width:60%;
+    border-radius:0.75rem;
+    padding:10px;
+
+}
+#email:focus{
+    border:rgb(158, 158, 255) solid 5px;
+    outline: none;
+}
+#submit{
+    display:block;
+    margin:10px auto;
+    background:#FFED52;
+    width:325px;
+    padding:10px;
+    border-radius:15px;
+    font-size:15px;
+    font-family:sans-serif;
+}
+#submit:hover{
+    background: #E0E0E0;
+    cursor: pointer;
+}
+#intro{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 3rem auto;
+    text-align: center;
+    background-color: rgb(230,248,250,0.5);
+}
+#intro-content{
+    width:50%;
+}
+.content{
+    width: 100%;
+    min-height: 250px;
+    background-color: rgb(230,248,250,0.8);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.content-div{
+    width: 25%;
+    text-align: center;
+}
+footer{
+    position: relative;
+    background-color: darkgray;
+    min-height: 150px;
+    width: 100%;
+}
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 50px;
+}
+#address{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0px;
+    width: 12%;
+    font-size: 17px;
+}
+footer >div> ul{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0px;
+}
+footer >div>ul > li{
+    margin: 3px 0;
+}
+#copyright{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}

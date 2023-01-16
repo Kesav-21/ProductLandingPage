@@ -9,24 +9,25 @@ a{
     color:#000;
     text-decoration:none;
   }
+/* Top background */
 .view-page{
     background-image: url("./src/bg.jpg");
-    background-position: 0px;
-    min-width: 450px;
-    min-height: 450px;
+    background-position: center;
+    min-width: 100%;
+    min-height: 400px;
 }
+/* Nav bar and Header */
 header{
-    min-height: 60px;
+    height: 60px;
     width: 100%;
-    margin: 0;
-    /* background:rgb(245,248,250,0.1); */
+    background:rgb(245,248,250,0.1);
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 #header-img{
     width: auto;
-    height: 70px;
+    height: 60px;
     transition: transform .2s;
 }
 #header-img:hover{
@@ -36,9 +37,8 @@ header{
     color: #FFED52;
     background: rgb(230,248,250,0.1);
     height: 60px;
-    padding: 23px;
+    padding: 20px;
 }
-
 .nav-link:hover{
     background-color: rgb(230,248,250,0.8);
     color: red;
@@ -48,21 +48,16 @@ header{
     flex-direction: row;
     color: #FFED52;
 }
-#welcome-section{
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0px auto;
-    min-height: 100px;
-}
+
+/* Top view page Content */
 #welcome-content{
     color:red;
-    font-size: 30px; 
+    font-size: 30px;
+    text-align: center;
 }
-
+/* button and email form  */
 #newsletter{
-    width: 48%;
+    width: 50%;
     margin: 0px auto;
 }
 #newsletter > h2 {
@@ -72,10 +67,9 @@ header{
 #email{
     display: block;
     margin: 0px auto;
-    width:60%;
+    width:calc(100% + -40px);
     border-radius:0.75rem;
     padding:10px;
-
 }
 #email:focus{
     border:rgb(158, 158, 255) solid 5px;
@@ -83,29 +77,42 @@ header{
 }
 #submit{
     display:block;
-    margin:10px auto;
+    margin:20px auto;
     background:#FFED52;
-    width:325px;
+    width:calc(100% + -40px);
     padding:10px;
     border-radius:15px;
-    font-size:15px;
+    font-size:20px;
+    font-weight: 600;
     font-family:sans-serif;
 }
 #submit:hover{
     background: #E0E0E0;
     cursor: pointer;
 }
+
+/* Video and Description */
 #intro{
+    background-color: rgb(230,248,250,0.5);
+    text-align: center;
+    padding: 20px;
+}
+#intro-section{
     width: 100%;
     display: flex;
     justify-content: space-around;
-    margin: 3rem auto;
-    text-align: center;
-    background-color: rgb(230,248,250,0.5);
+    align-items: center;
 }
-#intro-content{
-    width:50%;
+#intro-section > p{
+    width:50% ;
+    padding: 3vw;
+    font-size: large;
 }
+#intro-section > iframe{
+    width: 50%;
+}
+
+/* Content Of Product */
 .content{
     width: 100%;
     min-height: 250px;
@@ -113,12 +120,14 @@ header{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-bottom: 10px;
+    margin: 10px 0px;
 }
 .content-div{
     width: 25%;
     text-align: center;
 }
+
+/* Footer */
 footer{
     position: relative;
     background-color: darkgray;
@@ -150,4 +159,42 @@ footer >div>ul > li{
     bottom: 0;
     width: 100%;
     text-align: center;
+}
+/* For mobile Devices */
+@media screen and (max-width:768px){
+    #welcome-content{
+        font-size: 25px;
+        text-align: center;
+    }
+    .view-page{
+        background-position: center;
+        width: 100%;
+        min-height: 400px;
+    }
+    #newsletter{
+        width: 100%;
+        margin: 0px auto;
+    }
+    #intro-section{
+        flex-direction: column-reverse;
+    }
+    #intro-section iframe{
+        width: 100%;
+    }
+    #intro-section > p{
+        width: 100%;
+    }
+    .content{
+        flex-direction: column;
+    }
+    .content-div{
+        width: 100%;
+        padding: 10px;
+    }
+    .content-div p{
+        padding: 0 10px;
+    }
+    #address{
+        width: 40%;
+    }
 }
